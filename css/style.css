@@ -1,0 +1,12 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.rmp-tv-player .rmp-i-quick-forward-tv,
+.rmp-tv-player .rmp-i-quick-rewind-tv {
+  display: none !important;
+}
+
+pre {
+  font-size: 12px;
+}

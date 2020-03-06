@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description"
+    content="Example for using Radiant Media Player in a web-based Fire TV app">
+  <title>Fire TV app - Radiant Media Player</title>
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="robots" content="noindex">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Radiant Media Player</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <img src="images/fire_tv_32.png" width="32" alt="Radiant Media Player icon"> <strong>Fire TV
+          Demo App</strong>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Select a player</h3>
+        <ul>
+          <li><a href="mp4.html">MP4 VOD</a></li>
+          <li><a href="hls.html">HLS VOD</a></li>
+          <li><a href="aes-hls.html">AES-128 HLS VOD</a></li>
+          <li><a href="live.html">Live HLS</a></li>
+          <li><a href="ads.html">HLS VOD with video ads</a></li>
+        </ul>
+        <h3>Viewport size</h3>
+        <pre id="viewportSize"></pre>
+        <h3>Environment</h3>
+        <iframe width="100%" height="720" src="https://www.radiantmediaplayer.com/checkenv.html"
+          style="border:none;" allowfullscreen
+          sandbox="allow-scripts allow-presentation allow-same-origin"
+          allow="autoplay; fullscreen; picture-in-picture; xr-spatial-tracking; encrypted-media"></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
