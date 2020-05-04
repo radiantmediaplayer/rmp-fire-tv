@@ -28,7 +28,12 @@ is made to be tested in web browsers or in Amazon Web App Tester. When testing y
 ## Issues
 Issues should be submitted in this GitHub page. We will do our best to review them.
 
-## License
+## License for rmp-fire-tv
 rmp-fire-tv is released under MIT.
 
-Radiant Media Player has its own license which can be found here: [https://www.radiantmediaplayer.com/terms-of-service.html](https://www.radiantmediaplayer.com/terms-of-service.html).
+## License for Radiant Media Player
+Radiant Media Player is a commercial HTML5 media player, not covered by the above MIT license. 
+
+Radiant Media Player license can be found here: [https://www.radiantmediaplayer.com/terms-of-service.html](https://www.radiantmediaplayer.com/terms-of-service.html). 
+
+You may request a free trial for Radiant Media Player at: [https://www.radiantmediaplayer.com/free-trial.html](https://www.radiantmediaplayer.com/free-trial.html).
