@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
+	<title>Fire TV Demo App - DASH VP9 VOD</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="robots" content="noindex">
+</head>
+
+<body>
+	<script src="https://cdn.radiantmediatechs.com/rmp/5.10.4/js/rmp.min.js"></script>
+	<div id="rmpPlayer"></div>
+	<script>
+		var src = {
+			dash: 'https://storage.googleapis.com/shaka-demo-assets/sintel-webm-only/dash.mpd'
+		};
+		var settings = {
+			licenseKey: 'your-license-key',
+			src: src,
+			contentMetadata: {
+				title: 'Fire TV Demo App - DASH VP9 VOD'
+			},
+			autoplay: true,
+			skin: 'tv'
+		};
+		var elementID = 'rmpPlayer';
+		window.rmp = new RadiantMP(elementID);
+		window.rmp.init(settings);
+	</script>
+	<script src="js/player.js"></script>
+</body>
+
+</html>

@@ -17,6 +17,7 @@ The demo app is built with a landing page (index.html) that offers the possibili
 - live.html (Live HLS)
 - dash-drm.html (DASH DRM) **BETA**
 - dash-live.html (Live DASH)
+- dash-vp9.html (DASH VP9 VOD)
 - ads.html (HLS VOD with video ads)
 - ads-ima.html (HLS VOD with video ads (Google IMA))
 
