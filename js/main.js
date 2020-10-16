@@ -11,6 +11,4 @@ document.addEventListener('keydown', _onKeyDown);
 
 // user agent info
 var viewportSize = document.getElementById('viewportSize');
-var innerWidth = window.innerWidth;
-var innerHeight = window.innerHeight;
-viewportSize.innerHTML = 'width: ' + innerWidth + ' - height: ' + innerHeight;
+viewportSize.innerHTML = 'width: ' + window.innerWidth + ' - height: ' + window.innerHeight;
