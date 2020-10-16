@@ -5,7 +5,7 @@ Example for using [Radiant Media Player](https://www.radiantmediaplayer.com) in 
 You can use Radiant Media Player to build media-oriented web-based Fire TV applications. 
 The player is equipped with various optimisations, to work in the following environments:
 - [HTML5 web apps for Fire TV](https://developer.amazon.com/docs/fire-tv/getting-started-with-web-apps.html)
-- Fire OS 5+
+- Fire OS 6+ (previous versions of Fire OS may work but they are untested)
 
 For a list of supported features [see our documentation](https://www.radiantmediaplayer.com/docs/latest/fire-tv-apps.html#features).
 
@@ -15,11 +15,14 @@ The demo app is built with a landing page (index.html) that offers the possibili
 - hls.html (HLS VOD)
 - aes-hls.html (AES-128 HLS VOD)
 - live.html (Live HLS)
+- dash-drm.html (DASH DRM) **BETA**
+- dash-live.html (Live DASH)
 - ads.html (HLS VOD with video ads)
+- ads-ima.html (HLS VOD with video ads (Google IMA))
 
 Players displayed use our dedicated TV player layout for a better fullscreen experience on large displays.
 
-This demo app has been tested on an Amazon Fire TV Stick 4K.
+This demo app has been tested on an Amazon Fire TV Stick 4K (FireOS 6+).
 
 ## Example
 A live example of our demo app [can be viewed here](https://www.radiantmediaplayer.com/rmp-fire-tv/). This example 

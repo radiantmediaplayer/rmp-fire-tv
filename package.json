@@ -1,13 +1,13 @@
 {
   "name": "rmp-fire-tv",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Radiant Media Player <support@radiantmediaplayer.com>",
   "description": "Example for using Radiant Media Player in a web-based Fire TV app.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/radiantmediaplayer/rmp-fire-tv.git"
   },
-  "main": "js/player.js",
+  "main": "index.html",
   "keywords": [
     "fire",
     "tv",

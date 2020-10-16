@@ -5,28 +5,27 @@
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
-	<title>Fire TV Demo App - HLS VOD with video ads</title>
+	<title>Fire TV Demo App - HLS VOD with video ads (Google IMA)</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/5.10.4/js/rmp-vast.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/5.10.4/js/rmp.min.js"></script>
 	<div id="rmpPlayer"></div>
 	<script>
 		var src = {
-			hls: 'https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/playlist.m3u8'
+			hls: 'https://5b44cf20b0388.streamlock.net:8443/vod/smil:ed.smil/playlist.m3u8'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			contentMetadata: {
-				title: 'Fire TV Demo App - HLS VOD with video ads'
+				title: 'Fire TV Demo App - HLS VOD with video ads (Google IMA)'
 			},
 			autoplay: true,
 			ads: true,
-			adParser: 'rmp-vast',
-			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear-1.xml',
+			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=' + Date.now(),
 			skin: 'tv'
 		};
 		var elementID = 'rmpPlayer';
