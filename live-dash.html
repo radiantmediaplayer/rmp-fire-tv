@@ -3,32 +3,29 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
-	<title>Fire TV Demo App - MP4 VOD</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>Fire TV Demo App - Live DASH AVC (H.264)</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/5.10.4/js/rmp.min.js"></script>
+	<script src="https://cdn.radiantmediatechs.com/rmp/6.2.0/js/rmp.min.js"></script>
 	<div id="rmpPlayer"></div>
 	<script>
-		var src = {
-			mp4: [
-				'https://www.rmp-streaming.com/media/tos-high.mp4'
-			]
+		const src = {
+			hls: 'https://5b44cf20b0388.streamlock.net:8443/live/ngrp:live_all/manifest.mpd'
 		};
-		var settings = {
+		const settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			autoplay: true,
 			contentMetadata: {
-				title: 'Fire TV Demo App - MP4 VOD'
+				title: 'Fire TV Demo App - Live DASH AVC (H.264)'
 			},
 			skin: 'tv'
 		};
-		var elementID = 'rmpPlayer';
+		const elementID = 'rmpPlayer';
 		window.rmp = new RadiantMP(elementID);
 		window.rmp.init(settings);
 	</script>

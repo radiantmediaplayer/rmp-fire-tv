@@ -3,9 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>Fire TV Demo App - DASH VP9 VOD</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>Fire TV Demo App - Low Latency Live CMAF/fmp4 HLS AVC (H.264)</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
@@ -15,15 +14,15 @@
 	<div id="rmpPlayer"></div>
 	<script>
 		const src = {
-			dash: 'https://storage.googleapis.com/shaka-demo-assets/sintel-webm-only/dash.mpd'
+			hls: 'https://ll-hls-test.apple.com/cmaf/master.m3u8'
 		};
 		const settings = {
 			licenseKey: 'your-license-key',
 			src: src,
-			contentMetadata: {
-				title: 'Fire TV Demo App - DASH VOD VP9'
-			},
 			autoplay: true,
+			contentMetadata: {
+				title: 'Fire TV Demo App - Low Latency Live CMAF/fmp4 HLS AVC (H.264)'
+			},
 			skin: 'tv'
 		};
 		const elementID = 'rmpPlayer';
