@@ -10,33 +10,13 @@ The player is equipped with various optimisations, to work in the following envi
 - [HTML5 Web Apps for Fire TV](https://developer.amazon.com/docs/fire-tv/getting-started-with-web-apps.html)
 - [HTML5 Hybrid Apps for Fire TV](https://developer.amazon.com/docs/fire-tv/hybrid-apps-overview.html) - this is required for DRM support
 
-We support Fire TV devices running on FireOS 5+.
+We support Fire TV devices running on FireOS 6+.
 
 For a list of supported features [see our documentation](https://www.radiantmediaplayer.com/docs/latest/fire-tv-apps.html#features).
 
 ## Demo app structure
 
-The demo app is built with a landing page (index.html) that offers the possibility to start different players showcasing various features available with Radiant Media Player for Fire TV app:
-
-### VOD
-
-- dash.html: DASH VOD AVC (H.264)
-- dash-vp9.html: DASH VOD VP9
-- dash-maudios-mcaptions.html: DASH VOD VP9/AVC with multiple audios and multiple captions
-- hls.html: HLS-TS VOD AVC (H.264)
-- fmp4-hls.html: CMAF/fmp4 HLS VOD AVC (H.264)
-
-### Live
-
-- live-hls.html: Live HLS-TS AVC (H.264)
-- low-latency-live-hls.html: Low Latency Live CMAF/fmp4 HLS AVC (H.264)
-- live-dash.html: Live DASH AVC (H.264)
-
-### Video advertisement (VAST)
-
-- ads.html: Video ads with rmp-vast
-- ads-ima.html: Video ads with Google IMA
-
+The demo app is built with a landing page (index.html) that offers the possibility to start different players showcasing various features available with Radiant Media Player for Fire TV app.
 Players displayed use our dedicated TV skin for a better fullscreen experience on large displays.
 
 ### Example
@@ -48,7 +28,7 @@ is meant to be tested in [Amazon Web App Tester](https://developer.amazon.com/do
 
 We support Widevine DRM with DASH streaming on Fire TV. A basic Web Apps for Fire TV however does not allow for DRM support. We need to build a native Android app to display a WebView (a.k.a. hybrid app) - this is typically done by using a hybrid framework like Cordova or by creating a WebView project with Android Studio. This hybrid approach on Fire TV allows to provide capabilities that are not possible in a basic web app, due to the security boundary between the browser and the device APIs. This also enables DRM support in Amazon WebView (AWV) and better performance for video playback.
 
-Please follow [our guide to building Android TV apps with Cordova](https://www.radiantmediaplayer.com/docs/latest/android-tv.html) for guidance.
+Please follow [our guide for building Android TV apps with Cordova](https://www.radiantmediaplayer.com/docs/latest/android-tv.html) for guidance.
 
 ## Issues
 
