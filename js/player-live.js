@@ -1,9 +1,5 @@
 var playerButtons = [
-  { id: 0, name: 'fastRewind', element: null },
-  { id: 1, name: 'quickRewind', element: null },
-  { id: 2, name: 'playPause', element: null },
-  { id: 3, name: 'quickForward', element: null },
-  { id: 4, name: 'fastForward', element: null }
+  { id: 0, name: 'playPause', element: null }
 ];
 
 var container = document.getElementById('rmp');
@@ -73,12 +69,6 @@ var _onKeyDown = function (event) {
   window.console.log('Key code called : ' + keyCode);
   window.rmp.setControlsVisible(true);
   switch (keyCode) {
-    case 227: // REWIND 
-      window.rmp.fastRewind();
-      break;
-    case 228: // FAST_FORWARD 
-      window.rmp.fastForward();
-      break;
     case 179: // PLAY_PAUSE
       isPaused = window.rmp.getPaused();
       if (window.rmp.getAdOnStage() && window.rmp.getAdLinear()) {
@@ -117,18 +107,10 @@ window.addEventListener('load', function () {
 
 // when player reaches durationchange we wire the UI
 container.addEventListener('loadeddata', function () {
-  playerButtons[0].element = container.querySelector('.rmp-fast-rewind');
+  playerButtons[0].element = container.querySelector('.rmp-play-pause');
   playerButtons[0].element.setAttribute('data-button-id', '0');
-  playerButtons[1].element = container.querySelector('.rmp-i-quick-rewind-tv');
-  playerButtons[1].element.setAttribute('data-button-id', '1');
-  playerButtons[2].element = container.querySelector('.rmp-play-pause');
-  playerButtons[2].element.setAttribute('data-button-id', '2');
-  playerButtons[3].element = container.querySelector('.rmp-i-quick-forward-tv');
-  playerButtons[3].element.setAttribute('data-button-id', '3');
-  playerButtons[4].element = container.querySelector('.rmp-fast-forward');
-  playerButtons[4].element.setAttribute('data-button-id', '4');
   document.body.addEventListener('keydown', _onKeyDown);
-  _setActiveButton(2);
+  _setActiveButton(0);
   currentActiveButton = container.querySelector('.rmp-button-hover');
 });
 

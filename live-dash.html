@@ -10,13 +10,13 @@
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/6.2.0/js/rmp.min.js"></script>
-	<div id="rmpPlayer"></div>
+	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.0/js/rmp.min.js"></script>
+	<div id="rmp"></div>
 	<script>
-		const src = {
-			hls: 'https://5b44cf20b0388.streamlock.net:8443/live/ngrp:live_all/manifest.mpd'
+		var src = {
+			dash: 'https://5b44cf20b0388.streamlock.net:8443/live/ngrp:live_all/manifest.mpd'
 		};
-		const settings = {
+		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			autoplay: true,
@@ -25,11 +25,11 @@
 			},
 			skin: 'tv'
 		};
-		const elementID = 'rmpPlayer';
+		var elementID = 'rmp';
 		window.rmp = new RadiantMP(elementID);
-		window.rmp.init(settings);
+		rmp.init(settings);
 	</script>
-	<script src="js/player.js"></script>
+	<script src="js/player-live.js"></script>
 </body>
 
 </html>

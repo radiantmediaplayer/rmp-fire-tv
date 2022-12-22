@@ -4,32 +4,33 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>Fire TV Demo App - Live HLS-TS AVC (H.264)</title>
+	<title>Fire TV Demo App - Live CMAF HLS AVC (H.264)</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/6.2.0/js/rmp.min.js"></script>
-	<div id="rmpPlayer"></div>
+	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.0/js/rmp.min.js"></script>
+	<div id="rmp"></div>
 	<script>
-		const src = {
-			hls: 'https://5b44cf20b0388.streamlock.net:8443/live/ngrp:live_all/playlist.m3u8'
+		var src = {
+			hls: 'https://storage.googleapis.com/shaka-live-assets/player-source.m3u8'
 		};
-		const settings = {
+		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			autoplay: true,
+			dvrUIThreshold: 30000,
 			contentMetadata: {
-				title: 'Fire TV Demo App - Live HLS-TS AVC (H.264)'
+				title: 'Fire TV Demo App - Live CMAF HLS'
 			},
 			skin: 'tv'
 		};
-		const elementID = 'rmpPlayer';
+		var elementID = 'rmp';
 		window.rmp = new RadiantMP(elementID);
-		window.rmp.init(settings);
+		rmp.init(settings);
 	</script>
-	<script src="js/player.js"></script>
+	<script src="js/player-live.js"></script>
 </body>
 
 </html>

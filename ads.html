@@ -3,35 +3,34 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>Fire TV Demo App - Video ads with rmp-vast</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	<title>Fire TV Demo App - Video ads with rmp-vast - CMAF HLS</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/6.2.0/js/rmp.min.js"></script>
-	<div id="rmpPlayer"></div>
+	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.0/js/rmp.min.js"></script>
+	<div id="rmp"></div>
 	<script>
-		const src = {
-			hls: 'https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/playlist.m3u8'
+		var src = {
+			hls: 'https://www.radiantmediaplayer.com/media/v1/avc-mp4/hls/playlist.m3u8'
 		};
-		const settings = {
+		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			contentMetadata: {
-				title: 'Fire TV Demo App - Video ads with rmp-vast'
+				title: 'Fire TV Demo App - Video ads with rmp-vast - CMAF HLS'
 			},
 			autoplay: true,
 			ads: true,
 			adParser: 'rmp-vast',
-			adTagUrl: 'https://www.radiantmediaplayer.com/vast/tags/inline-linear-1.xml',
+			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=' + Date.now(),
 			skin: 'tv'
 		};
-		const elementID = 'rmpPlayer';
+		var elementID = 'rmp';
 		window.rmp = new RadiantMP(elementID);
-		window.rmp.init(settings);
+		rmp.init(settings);
 	</script>
 	<script src="js/player.js"></script>
 </body>

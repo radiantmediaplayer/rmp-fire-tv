@@ -11,3 +11,29 @@ pre {
 video::-webkit-media-controls-overlay-enclosure {
   display: none !important;
 }
+
+/* 
+ * CSS for fine-tuning Radiant Media Player TV skin 
+ */
+ .rmp-button.rmp-button-hover {
+  color: #ff1744;
+}
+
+.rmp-overlay-level.rmp-button-hover {
+  border-color: #ff1744;
+}
+
+/* 
+ * When a module is open: keep the control bar visible to 
+ * allow remote control navigation on control bar buttons 
+ * also hide the play/pause button on top right corner
+ */
+.rmp-tv.rmp-module-open-ui .rmp-control-bar {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.rmp-tv .rmp-module-overlay-icons.rmp-module-overlay-play-pause {
+  display: none !important;
+}

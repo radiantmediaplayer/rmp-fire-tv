@@ -3,21 +3,20 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		content="width=device-width,minimum-scale=1,initial-scale=1">
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<title>Fire TV Demo App - DASH VOD AVC (H.264)</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
 
 <body>
-	<script src="https://cdn.radiantmediatechs.com/rmp/6.2.0/js/rmp.min.js"></script>
-	<div id="rmpPlayer"></div>
+	<script src="https://cdn.radiantmediatechs.com/rmp/8.4.0/js/rmp.min.js"></script>
+	<div id="rmp"></div>
 	<script>
-		const src = {
-			dash: 'https://storage.googleapis.com/shaka-demo-assets/sintel-mp4-only/dash.mpd'
+		var src = {
+			dash: 'https://www.radiantmediaplayer.com/media/v1/avc-mp4/dash/manifest.mpd'
 		};
-		const settings = {
+		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
 			contentMetadata: {
@@ -26,9 +25,9 @@
 			autoplay: true,
 			skin: 'tv'
 		};
-		const elementID = 'rmpPlayer';
+		var elementID = 'rmp';
 		window.rmp = new RadiantMP(elementID);
-		window.rmp.init(settings);
+		rmp.init(settings);
 	</script>
 	<script src="js/player.js"></script>
 </body>

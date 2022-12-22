@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<title>Fire TV Demo App - CMAF/fmp4 HLS VOD AVC (H.264)</title>
+	<title>Fire TV Demo App - Video ads with rmp-vast - DASH</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="robots" content="noindex">
 </head>
@@ -14,15 +14,18 @@
 	<div id="rmp"></div>
 	<script>
 		var src = {
-			hls: 'https://www.radiantmediaplayer.com/media/v1/avc-mp4/hls/playlist.m3u8'
+			dash: 'https://www.radiantmediaplayer.com/media/v1/avc-mp4/dash/manifest.mpd'
 		};
 		var settings = {
 			licenseKey: 'your-license-key',
 			src: src,
-			autoplay: true,
 			contentMetadata: {
-				title: 'Fire TV Demo App - CMAF/fmp4 HLS VOD AVC (H.264)'
+				title: 'Fire TV Demo App - Video ads with rmp-vast - DASH'
 			},
+			autoplay: true,
+			ads: true,
+			adParser: 'rmp-vast',
+			adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=' + Date.now(),
 			skin: 'tv'
 		};
 		var elementID = 'rmp';
