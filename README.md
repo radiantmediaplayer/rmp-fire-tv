@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Support for building Android TV apps with Radiant Media Player is deprecated with Radiant Media Player v9.15 and will be removed in Radiant Media Player v10.
+
 # rmp-fire-tv
 
 Example for using [Radiant Media Player](https://www.radiantmediaplayer.com) in a Fire TV app.
